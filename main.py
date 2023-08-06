@@ -1,4 +1,6 @@
 import re
+from data import *
+
 
 def get_file_content(file_path):
     try:
@@ -9,7 +11,8 @@ def get_file_content(file_path):
         print("File not found")
 
 
-def remove_extra_information(file_path, old_string, new_string, file_content, file_output_path):
+def remove_extra_information(file_path, old_string, file_content, file_output_path):
+    new_string = 'symbol'
     with open(file_output_path, 'w') as file:
         new_contents = file_content.replace(old_string, new_string).replace('%', ' ').replace(',1', '').replace(' ', '').replace('cls', '')
         file.write(new_contents)
@@ -42,13 +45,8 @@ def final_formating(file_content, file_output_path):
 
 
 if __name__ == "__main__":
-    file_path = r'C:\Users\Acer\VS\train\example.txt'
-    file_output_path = r'C:\Users\Acer\VS\train\example_out.txt'
-    old_string = r'%FbjkfasjinfhjaBW:'
-    new_string = 'symbol'
-
     file_content = get_file_content(file_path)
-    file_content = remove_extra_information(file_path, old_string, new_string, file_content, file_output_path)
+    file_content = remove_extra_information(file_path, old_string, file_content, file_output_path)
     
     KEY = get_key(file_content)
 
