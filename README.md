@@ -1,4 +1,5 @@
-# BATCH_decoder
+# BATCH_deobfuscator
+
 
 Insert the link to the file from which you want to retrieve the source code into 'file_path'.
 
