@@ -15,4 +15,5 @@ old_string = r'%key:'
 Next, remove everything from the batch file, leaving only what was after the '=' sign in the key (refer to example.txt) and the encrypted code of the program itself.
 
 P.S., you don't need to remove the 'cls' command.
+
 P.S.S., this programm doesn't give you exact code that was written, but only gives you general information about what a particular script does
